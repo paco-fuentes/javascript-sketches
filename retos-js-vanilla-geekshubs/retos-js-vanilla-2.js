@@ -404,5 +404,9 @@
 // 8. Crea un array de 10 posiciones de números con valores pedidos por prompt. Muestra por consola el índice y el valor al que corresponde. Haz dos métodos, uno para
 // rellenar valores y otro para mostrar.
 
+// prompt * 10
+// const numTest = [4,2,6,4,7,3,6,3,1,7];
 
-// introduceValores
+// numTest.forEach((element, index) => {
+//     return console.log(element, index);
+// });
