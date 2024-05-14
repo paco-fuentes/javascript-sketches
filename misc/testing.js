@@ -25,7 +25,6 @@
 //     return (gap);
 // }
 
-
 // console.log(tiers(5));
 
 // // con var undefined
@@ -44,7 +43,6 @@
 
 // foo()
 
-
 // // TypeError fn is not a function
 // fn();
 // var fn = function(){
@@ -53,10 +51,42 @@
 
 // undefined..
 // function bar(){
-//     return 
+//     return
 //     {
 //         message: 'hello world'
 //     };
 // };
 
 // console.log(bar());
+
+// function maxProductoAdyacente(numeros) {
+//   let maxProducto = -Infinity;
+//   let maxPar;
+
+//   for (let i = 0; i < numeros.length - 1; i++) {
+//     const producto = numeros[i] * numeros[i + 1];
+//     if (producto > maxProducto) {
+//       maxProducto = producto;
+//       maxPar = [numeros[i], numeros[i + 1]];
+//     }
+//   }
+
+//   return { maxPar, maxProducto };
+// }
+
+// const numeros = [3, 6, -2, -5, 7, 3];
+// const resultado = maxProductoAdyacente(numeros);
+// console.log(
+//   `El par de elementos adyacentes que tiene el producto más grande es ${resultado.maxPar}, y el producto es ${resultado.maxProducto}.`
+// );
+
+
+// en la primera iteración key es brand: mobile.brand
+let mobile = {
+    brand: 'Samsung',
+    model: 'Galaxy Note 9'
+  };
+  
+  for (let key in mobile) {
+    console.log(`${key}: ${mobile[key]}`);
+  }

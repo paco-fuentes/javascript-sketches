@@ -1,7 +1,8 @@
-<section>
+<div>
 <div 
     style=
         "
+            font-family: system-ui;
             background-color: #FFD700;
             border: black solid 0.1rem;
             padding: 2rem;
@@ -11,6 +12,8 @@
 >
 
 <h1 align="center"> My JavaScript sketches, test, playgrounds, challenges, trash can ... </h1>
+
+---
 
 <div align="center" style="padding: 2rem" >
     <img 
@@ -24,6 +27,8 @@
     align= "center"
     />
 </div>
+
+---
 
 <div align="center">
     <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">
@@ -127,7 +132,9 @@
     </a>
 </div>
 
-<div align="center" style="padding: 2rem; filter: drop-shadow(0.6rem 0.rem 0rem black);" >
+---
+
+<div align="center" style="padding: 2rem; filter: drop-shadow(0.6rem 0.4rem 0rem black);" >
     <a href = "mailto:pacofuentes.work@gmail.com">
         <img 
             style="padding: 0.5rem"
@@ -144,7 +151,9 @@
     </a> 
 </div>
 
+---
+
 <p align="center">Paco Fuentes. 2024</p>
 
 </div>
-</section>
+</div>
