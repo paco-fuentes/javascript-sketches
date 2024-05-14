@@ -23,7 +23,7 @@
                 border: black solid 0.1rem;
                 filter: drop-shadow(0.8rem 0.6rem 0rem black);
             " 
-    src="./public/this-is-fine.png" 
+    src="./public/img/this-is-fine.png" 
     align= "center"
     />
 </div>
