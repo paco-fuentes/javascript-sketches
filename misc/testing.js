@@ -81,12 +81,12 @@
 // );
 
 
-// en la primera iteración key es brand: mobile.brand
-let mobile = {
-    brand: 'Samsung',
-    model: 'Galaxy Note 9'
-  };
+// // en la primera iteración key es brand: mobile.brand
+// let mobile = {
+//     brand: 'Samsung',
+//     model: 'Galaxy Note 9'
+//   };
   
-  for (let key in mobile) {
-    console.log(`${key}: ${mobile[key]}`);
-  }
+//   for (let key in mobile) {
+//     console.log(`${key}: ${mobile[key]}`);
+//   }
