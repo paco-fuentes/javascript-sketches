@@ -1,19 +1,19 @@
 function findOutlier(integers) {
-    //your code here
-    let odd = [];
-    let even = [];
-    const plainArr = integers.flat();
-  
-    plainArr.forEach((e) => {
-      if (e % 2 === 0) {
-        even.push(e);
-      } else {
-        odd.push(e);
-      }
-    });
-  
-    return even.length==1 ? even[0] : odd[0];
-  }
+  //your code here
+  let odd = [];
+  let even = [];
+  const plainArr = integers.flat();
+
+  plainArr.forEach((e) => {
+    if (e % 2 === 0) {
+      even.push(e);
+    } else {
+      odd.push(e);
+    }
+  });
+
+  return even.length == 1 ? even[0] : odd[0];
+}
 
 console.log(findOutlier([2, 6, 8, 10, 3], 3));
 

@@ -30,21 +30,18 @@ function dnaStrand(dna) {
 console.log(dnaStrand("AAAA"));
 console.log(dnaStrand("ATTGC"));
 
-
 // function DNAStrand(dna) {
 //     return dna.replace(/./g, function(c) {
 //       return DNAStrand.pairs[c]
 //     })
 //   }
-  
+
 //   DNAStrand.pairs = {
 //     A: 'T',
 //     T: 'A',
 //     C: 'G',
 //     G: 'C',
 //   }
-
-
 
 // var pairs = {'A':'T','T':'A','C':'G','G':'C'};
 
