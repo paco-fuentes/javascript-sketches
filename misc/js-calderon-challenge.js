@@ -44,9 +44,8 @@ You have to create a variadic function (who can receive a not defined number of 
 
 // greet("Anacleto"); // Just like console.log(greeting(say('Anacleto'))) //returns 'Hi Anacleto'
 
-
 //// respuesta 2B
-// const compose = 
+// const compose =
 // (...args) => {
 //   return (...args2) => {
 //     return args.reverse().reduce((fn1, fn2, i) => {
@@ -60,7 +59,6 @@ You have to create a variadic function (who can receive a not defined number of 
 // const greet = compose(console.log, greeting, say);
 
 // greet("Anacleto"); // Just like console.log(greeting(say('Anacleto'))) //returns 'Hi Anacleto'
-
 
 `3 - Currying
 Currying is the process of transforming a function that takes multiple arguments in a tuple as its argument, 
@@ -80,7 +78,7 @@ const curried = curry((a, b, c) => a + b + c)
 console.log(curried(1)(2)) //Returns a function who spects one value to return a result
 console.log(curried(1)(2)(3)) //Returns 6
 console.log(curried(1,2)(3)) //Returns 6
-console.log(curried(1,2,6)) //Returns 6`
+console.log(curried(1,2,6)) //Returns 6`;
 
 // // Solution to debug
 // const curry = fn => {
@@ -101,7 +99,7 @@ console.log(curried(1,2,6)) //Returns 6`
 // console.log(curried(1,2)(3)) //Returns 6
 // console.log(curried(1,2,6)) //Returns 6
 
-// // solution ok 
+// // solution ok
 // const curry = fn => {
 //     const arity = fn.length
 //     const currify = (...args) => args.length === arity ? fn(...args) : (...newArgs) => currify(...[...args, ...newArgs])

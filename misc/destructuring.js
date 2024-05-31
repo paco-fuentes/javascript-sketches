@@ -8,8 +8,13 @@ function calculate(a, b) {
   return [add, subtract, multiply, divide];
 }
 
-const [suma, subtract, multiply, divide] = calculate(4, 7);
-console.log(suma);
+// const [suma, subtract, multiply, divide] = calculate(4, 7);
+const [...todasLasOperaciones] = calculate(4, 7);
+const [, , , ...todasLasOperacionesRest] = calculate(4, 7);
+const [suma, , multiplicar, ...ops] = calculate(4, 7);
+console.log(...ops, suma, multiplicar); // suma, multiplica y divide
+console.log(...todasLasOperaciones); // suma, multiplica y divide
+console.log(...todasLasOperacionesRest); // suma, multiplica y divide
 
 // rest
 const numbers = [1, 2, 3, 4, 5, 6];
