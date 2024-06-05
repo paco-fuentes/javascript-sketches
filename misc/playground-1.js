@@ -392,3 +392,28 @@
 // const sayHello = (yourNameFn) => 'Hello ' + yourNameFn();
 
 // console.log(sayHello(name)) //Must print "Hello Periquillo!"
+
+// // forEach devuleve undefined!!
+// // aquí se usaría un .map!!
+// const array = [1, 2, 3];
+// const mapped = array.forEach((e, i) => {
+//   return i * e;
+// });
+// console.log(array, mapped);
+
+
+// // comparar elementos y guardarlos en el acc y repetir en orden inverso.
+// const arr = [1, 2, "serán los primeros.", 3, 4, "Los últimos", 5, 6, 7];
+// const rf = arr.reduce((acc, e) =>
+//   typeof e === "string" ? (acc = e) : (acc = acc)
+// );
+// const rfRv = arr.reduce((acc, e) =>
+//   typeof acc === "string" ? (e = acc) : (e = e)
+// );
+// const rfN = arr.reduce((acc, e) =>
+//   typeof e === "number" ? (acc = e) : (acc = acc)
+// );
+// const rfNRv = arr.reduce((acc, e) =>
+//   typeof acc === "number" ? (e = acc) : (e = e)
+// );
+// console.log(rf, rfRv, rfN, rfNRv);
