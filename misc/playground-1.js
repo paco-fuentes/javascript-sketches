@@ -401,7 +401,6 @@
 // });
 // console.log(array, mapped);
 
-
 // // comparar elementos y guardarlos en el acc y repetir en orden inverso.
 // const arr = [1, 2, "serán los primeros.", 3, 4, "Los últimos", 5, 6, 7];
 // const rf = arr.reduce((acc, e) =>
@@ -417,3 +416,34 @@
 //   typeof acc === "number" ? (e = acc) : (e = e)
 // );
 // console.log(rf, rfRv, rfN, rfNRv);
+
+/////////////
+
+// function findNeedle(haystack) {
+//   for (let i = 0; i < haystack.length; i++) {
+//     if (haystack[i] === "needle") {
+//       return `found the needle at position ${i}`;
+//     }
+//   }
+// }
+
+// function findNeedle(haystack) {
+//   return "found the needle at position " + haystack.indexOf("needle");
+// }
+
+// console.log(
+//   findNeedle([
+//     "3",
+//     "123124234",
+//     undefined,
+//     "needle",
+//     "world",
+//     "hay",
+//     2,
+//     "3",
+//     true,
+//     false,
+//   ])
+// );
+
+/////////////
