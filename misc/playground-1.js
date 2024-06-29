@@ -447,3 +447,9 @@
 // );
 
 /////////////
+
+// // // const arr = ["a", "bb", "casa", "c", "abeja"];
+// const arr = ["1", "2", "3", 4, 5]; // 15
+// // const arr = [1, 2, 3, '4', '5']; // 15
+// const sumStr = arr.reduce((acc, e) => acc + Number(e), 0);
+// console.log(sumStr);

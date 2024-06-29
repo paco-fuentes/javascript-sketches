@@ -387,7 +387,7 @@
 //     const euroPesetas = 166;
 //     switch (moneda) {
 //         case "pesetas":
-//             return `${euros} son ${euros*euroPesetas} pesetas`;
+//             return `${euros} euros son ${euros*euroPesetas} pesetas`;
 //             break;
     
 //         default:
