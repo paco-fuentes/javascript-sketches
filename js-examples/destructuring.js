@@ -9,6 +9,14 @@ arr1[2] = "666"; // reasignacion del elemento n por string
 // console.log(num1, num2, num3, ...numRest);
 // console.log(typeof num2);
 
+// change values of let variable
+let a = 8, b = 6;
+// console.log(a, b);
+
+ [b, a] = [a, b]
+//  console.log(a, b);
+
+
 // -----------------------------------------------------------
 
 // objetos
@@ -50,8 +58,8 @@ const JUEGOS = {
 };
 
 const {  title, year } = JUEGOS[idVar];
-console.log(JUEGOS[idVar]);
-console.log(title, year);
+// console.log(JUEGOS[idVar]);
+// console.log(title, year);
 
 
 // // -----------------------------------------------------------
