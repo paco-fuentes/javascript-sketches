@@ -346,191 +346,33 @@
 
 // console.log(smallestCommons([1, 5]));
 
-// function smallestCommons(arr) {
-//   const min = Math.min(...arr);
-//   const max = Math.max(...arr);
-//   const range = (start, stop, step) =>
-//     Array.from(
-//       { length: (stop - start) / step + 1 },
-//       (_, i) => start + i * step
-//     );
-
-//   const MCD = (a, b) => {
-//     if (!b) return a;
-//     return MCD(b, a % b);
-//   };
-
-//   const MCM = (nums) => {
-//     return (
-//       nums.reduce((acc, e) => acc * e, 1) /
-//       nums.reduce((acc, e) => MCD(acc, e), 0)
-//     );
-//   };
-
-//   const rangeNums = range(min, max, 1);
-//   console.log(rangeNums);
-//   return MCM(rangeNums);
-// }
-
-// console.log(smallestCommons([1, 5]));
-
-// function smallestCommons(arr) {
-//   const min = Math.min(...arr);
-//   const max = Math.max(...arr);
-//   const isPrime = (n, i = n - 1) =>
-//     n !== 0
-//       ? i > 1
-//         ? n % i === 0
-//           ? false
-//           : isPrime(n, i - 1)
-//         : true
-//       : false;
-
-//   // descomponer un numero
-//   // desde el 2 buscar el numero primo que es divisor de el, que tiene resto 0
-//   // sacar las bases
-//   // sacar los exponentes de cada base
-//   // multiplicarlos todos
-
-//   const range = (a) =>
-//     Array.from({ length: max - min + 1 }, (e, i) => (e = min + i));
-//   const desc = (n) => {
-//     return Array.from({ length: n }, (_, i, __) => i + 1)
-//       .slice(1)
-//       .filter(isPrime)
-//       .filter((e) => n % e === 0 && e !== 1)
-//       .slice(0, 1)
-//       .map((e) => {
-//         console.log(n, e);
-//         return e + desc(n / e);
-//       });
-//   };
-
-//   const basesAndExpMap = (arrRange) => arrRange.map((e) => desc(e));
-
-//   const bases = new Set(
-//     basesAndExpMap(range(arr))
-//       .map((e) => (e > max || e < min ? e[0].split("") : e))
-//       .flat()
-//   );
-
-//   const exp = 0;
-
-//   // return [...bases].reduce((acc, e)=> acc*e)
-//   return exp;
-// }
-
-// console.log(smallestCommons([23, 18]));
-
-// function smallestCommons(arr) {
-//   const min = Math.min(...arr)
-//   const max = Math.max(...arr)
-//   const isPrime = (n, i = n - 1) =>
-//     n !== 0
-//       ? i > 1
-//         ? n % i === 0
-//           ? false
-//           : isPrime(n, i - 1)
-//         : true
-//       : false;
-
-//   // descomponer un numero
-//   // desde el 2 buscar el numero primo que es divisor de el, que tiene resto 0
-//   // sacar las bases
-//   // sacar los exponentes de cada base
-//   // multiplicarlos todos
-
-//   const range = a => Array.from({ length: max - min + 1 }, (e, i) => e = min + i)
-//   const factorize = n => {
-//     return Array
-//       .from({ length: n }, (_, i, __) => i + 1)
-//       .slice(1)
-//       .filter(isPrime)
-//       .filter(e => n % e === 0)
-//       .slice(0, 1)
-//       .map((e) => {
-//         // console.log(n, e)
-//         return e + ' ' + factorize(n / e)
-//       })
-//   }
-
-//   const factorizeRange = arrRange => arrRange.map(e => factorize(e))
-
-//   const setBases = new Set((factorizeRange(range(arr)).flat(Infinity).map(e => e.split(' ')).flat()).filter(e => e !== '').map(e => Number(e)))
-//   const bases = [...setBases].reduce((acc, e) => acc * e)
-
-//   const expArr = factorizeRange(range(arr)).flat().map(e => ((e.split(' '))).map(Number).filter(e => e !== 0))
-
-//   const exp = expArr.filter((e, i, a) => e)
-//   // return [...bases].reduce((acc, e)=> acc*e) * exp.reduce((acc, e)=>acc*e)
-
-//   return exp
-// }
-
 function smallestCommons(arr) {
   const min = Math.min(...arr);
   const max = Math.max(...arr);
-  const isPrime = (n, i = n - 1) =>
-    n !== 0
-      ? i > 1
-        ? n % i === 0
-          ? false
-          : isPrime(n, i - 1)
-        : true
-      : false;
-
-  // descomponer un numero
-  // desde el 2 buscar el numero primo que es divisor de el, que tiene resto 0
-  // sacar las bases
-  // sacar los exponentes de cada base
-  // multiplicarlos todos
-
-  const range = (a) =>
-    Array.from({ length: max - min + 1 }, (e, i) => (e = min + i));
-  const factorize = (n) => {
-    return Array.from({ length: n }, (_, i, __) => i + 1)
-      .slice(1)
-      .filter(isPrime)
-      .filter((e) => n % e === 0)
-      .slice(0, 1)
-      .map((e) => {
-        // console.log(n, e)
-        return e + " " + factorize(n / e);
-      });
-  };
-
-  const factorizeRange = (arrRange) => arrRange.map((e) => factorize(e));
-
-  const setBases = new Set(
-    factorizeRange(range(arr))
-      .flat(Infinity)
-      .map((e) => e.split(" "))
-      .flat()
-      .filter((e) => e !== "")
-      .map((e) => Number(e))
-  );
-  const bases = [...setBases].reduce((acc, e) => acc * e);
-
-  const expArr = factorizeRange(range(arr))
-    .flat()
-    .map((e) =>
-      e
-        .split(" ")
-        .map(Number)
-        .filter((e) => e !== 0)
+  const range = (start, stop, step) =>
+    Array.from(
+      { length: (stop - start) / step + 1 },
+      (_, i) => start + i * step
     );
 
-  // const highestExp = [...expArr].filter((e, i, a) => e[i%a.length]) // encuentra los numeros que se repiten mas de una vez
+  const MCD = (a, b) => {
+    if (!b) return a;
+    return MCD(b, a % b);
+  };
 
-  const exp = [...expArr];
-  const expMaxGroupLength = Math.max(...[...expArr].map((e, i, a) => e.length));
-  // return [...bases].reduce((acc, e)=> acc*e) * exp.reduce((acc, e)=>acc*e)
+  const MCM = (nums) => {
+    return (
+      nums.reduce((acc, e) => acc * e, 1) /
+      nums.reduce((acc, e) => MCD(acc, e), 0)
+    );
+  };
 
-  return exp;
+  const rangeNums = range(min, max, 1);
+  console.log(rangeNums);
+  return MCM(rangeNums);
 }
 
-console.table(smallestCommons([23, 18]));
-console.table(smallestCommons([1, 13]));
+console.log(smallestCommons([1, 5]));
 
 // // 15
 // function dropElements(arr, func) {
