@@ -39,7 +39,7 @@ function checkCashRegister(price, cash, cid) {
       )
     ] || "";
 
-  console.log(findCurrencyValue(changeAmount));
+  // console.log(findCurrencyValue(changeAmount));
 
   const processChange = cash <= price || {
     status: "OPEN",
@@ -62,7 +62,7 @@ function checkCashRegister(price, cash, cid) {
     : processChange;
 }
 
-const res = checkCashRegister(16.5, 20, [
+const res = checkCashRegister(3.26, 100, [
   ["PENNY", 1.01],
   ["NICKEL", 2.05],
   ["DIME", 3.1],
@@ -72,20 +72,19 @@ const res = checkCashRegister(16.5, 20, [
   ["TEN", 20],
   ["TWENTY", 60],
   ["ONE HUNDRED", 100],
-])
-  .change[0].split(" ")
+]).change[0].split(" ")
   .map((e) => e.split(","))
   .map((e) => [e[0], Number(e[1])])
   .filter((e) => e[0] !== "undefined")
-  .reduce(
-    (acc, e, idx, arr) => {
-      const arrSet = new Set(arr)
-      acc = [...arrSet]
-      return acc
-    },[]
-  );
+  .reduce((acc, [key, value]) => {
+    acc[key] ? (acc[key] += value) : (acc[key] = value);
+    const { change } = acc;
+    return acc;
+  }, {});
 
-console.table(res[0][0]);
+// return Object.entries(result);
+
+console.table(res);
 
 // const altIdx = idx < arr.length - 1 ? idx + 1 : 0;
 // const current = e;
