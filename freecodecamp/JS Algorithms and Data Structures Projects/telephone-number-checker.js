@@ -1,11 +1,9 @@
 function telephoneCheck(str) {
-  const str2 = "1555";
-  const regEx = /([{1?=\s||()}])(\(\d{3}\)|\d{3})/;
-  return regEx.test(str2);
+  const myRegex = /^(1\s?)?((\d{3}[\s.-]?\d{3}[\s.-]?\d{4}$)|(\(\d{3}\)[\s.-]?\d{3}[\s.-]?\d{4}$))/;
+  return myRegex.test(str);
 }
 
-console.log(telephoneCheck("555-555-5555"));
-
+console.log(telephoneCheck("1 555)-555-5555"))
 /*
 telephoneCheck("555-555-5555") // should return a boolean.
 telephoneCheck("1 555-555-5555") // should return true.
