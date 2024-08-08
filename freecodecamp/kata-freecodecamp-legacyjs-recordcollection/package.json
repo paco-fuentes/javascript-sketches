@@ -1,0 +1,17 @@
+{
+  "name": "kata-freecodecamp-legacyjs-recordcollection",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "tape tests/*.test.js | tap-spec-emoji"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tap-spec-emoji": "^6.1.2",
+    "tape": "^5.7.5"
+  }
+}
